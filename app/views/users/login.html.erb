@@ -1,0 +1,11 @@
+<h1>User login</h1>
+<a href="/users/register">Register</a>
+<form action="/login" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  Email: <input type="text" name="email" value="">
+  Password: <input type="password" name="password" value="">
+  <input type="submit" value="Submit">
+</form>
+<% if flash[:alert] %>
+<%=flash[:alert]%>
+<%end%>
